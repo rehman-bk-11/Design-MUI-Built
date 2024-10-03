@@ -24,7 +24,16 @@ function SideBar() {
     <ErrorIcon/>,<AccountCircleRoundedIcon/>,<SupervisorAccountRoundedIcon/>,<GroupsIcon/>,<EventIcon/>
   ]
   const drawer = (
-    <div>      
+    <div>
+      <AppBar position="fixed">
+          <Toolbar>
+          <Typography variant="h6" sx={{ flexGrow: 1, marginLeft: '23px',display: { md: 'flex'} }}>
+              UON
+          </Typography>
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />
+          </Toolbar>
+      </AppBar>
+      
       <Toolbar />
       <Divider />
       <List>
@@ -58,7 +67,7 @@ function SideBar() {
 
   return (   
     <>
-      <div style={{ marginTop: '128px' }}>
+      <div style={{ marginTop: '60px' }}>
         <Drawer
           variant="permanent">
           {drawer}
